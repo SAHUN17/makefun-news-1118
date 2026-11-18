@@ -15,7 +15,7 @@ import sys
 
 from PIL import Image, ImageDraw
 
-import render6 as R
+import render7 as R
 from content_1118 import PAGE
 
 BOXES: list[tuple[float, float, float, float, str]] = []

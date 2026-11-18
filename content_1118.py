@@ -6,7 +6,7 @@ clause that fits, so no card ends mid-thought. Nothing here is invented and
 nothing is a forecast.
 """
 
-from render6 import Page, Story
+from render7 import Page, Story
 
 PAGE = Page(
     lead=Story(
