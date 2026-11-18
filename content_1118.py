@@ -12,7 +12,7 @@ PAGE = Page(
         kicker="THE GULF",
         head="US strikes Iran's Qeshm island as Tehran's drones hit Gulf states",
         detail="Iranian aerial attacks were intercepted over Bahrain and Kuwait while Washington hit the "
-        "Strait of Hormuz island; the strait, the route for a fifth of the world's oil, is now the "
+        "Strait of Hormuz island; a fifth of the world's oil moves through that strait, now the "
         "focus of the stalemated war.",
         art="burst",
         colour=(112, 40, 32),
