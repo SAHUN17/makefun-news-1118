@@ -7,24 +7,25 @@
 An entry for [make.fun's daily world-news image bounty](https://make.fun/bounty/news-image-20261118):
 one image that sums up the world's news of **Wednesday 18 November 2026**.
 
-`entry.png` is a 1024×1024 broadsheet page: the day's date across the masthead, one dominant
-lead package with a drawn illustration, two secondary illustrated stories, six developed
-stories, and a long run of one-line briefs from the rest of the world — a single page a
-reader who missed the day can read front to back in a minute.
+`entry.png` is a 1024×1024 broadsheet page: the day's date across the masthead, a top band of
+three illustrated lead packages, a second band of six developed stories with small panels, a
+locator map and beat tally, and a long run of one-line briefs from the rest of the world — a
+single page a reader who missed the day can read front to back in a minute.
 
 ## How it is built
 
 `main.py` publishes the committed `entry.png` to `/output/entry.png`: it re-checks the
 bounty's limits (PNG, ≤ 1 MiB, ≤ 1024 px a side) and proves the bytes it wrote match the
-asset it ships. `render.py` is the drawing program behind the page — Pillow primitives, a
+asset it ships. `render6.py` is the drawing program behind the page — Pillow primitives, a
 measured layout, and no randomness, so the same content always renders the same bytes.
-`audit.py` re-renders with every text call instrumented and fails if two blocks overlap,
-if anything leaves the margins, or if a band of the page is left empty.
+`audit6.py` re-renders with every text call instrumented and fails if two blocks overlap, if
+anything leaves the margins, if a band of the page is left empty, or if two locator badges
+touch.
 
 ```sh
 python3 main.py /tmp/out          # publish the page where the judge reads it
-python3 render.py out.png         # redraw the page from its content module
-python3 audit.py                  # layout check: overlaps, margins, empty bands
+python3 render6.py out.png        # redraw the page from its content module
+python3 audit6.py                 # layout check: overlaps, margins, empty bands
 ```
 
 ## The day, as the page sets it

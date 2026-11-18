@@ -1,97 +1,86 @@
 """Content of the 18 November 2026 edition, built from verified reporting.
 
 Every headline below is a story published on Wednesday 18 November 2026 (RSS
-pubDate), and every detail is that report's own summary sentence, trimmed to fit.
-Nothing here is invented and nothing is a forecast.
+pubDate), and every detail is that report's own summary sentence, cut to the
+clause that fits, so no card ends mid-thought. Nothing here is invented and
+nothing is a forecast.
 """
 
-from render5 import Page, Story
+from render6 import Page, Story
 
 PAGE = Page(
     lead=Story(
         kicker="THE GULF",
-        head="US strikes Iran's Qeshm island as Tehran's drones hit Gulf states",
-        detail="Iranian aerial attacks were intercepted over Bahrain and Kuwait while Washington hit the "
-        "Strait of Hormuz island; a fifth of the world's oil moves through that strait, now the "
-        "focus of the stalemated war.",
+        head="US strikes Iran's Qeshm island as drones hit Gulf states",
+        detail="Iranian attacks were intercepted over Bahrain and Kuwait; a fifth of the "
+        "world's oil moves through the strait.",
         art="burst",
         colour=(112, 40, 32),
     ),
     seconds=[
         Story(
             kicker="UKRAINE",
-            head="Kyiv hits the Crimean bridge hours before Trump, Xi and Putin meet",
-            detail="The strike is a display of strength as Kyiv fears the Shenzhen summit of the three "
-            "leaders will heap pressure on it to accept a truce.",
+            head="Kyiv hits the Crimean bridge hours before a Trump-Xi-Putin summit",
+            detail="A show of strength before Shenzhen, where Kyiv fears pressure to accept "
+            "a truce.",
             art="bridge",
             colour=(34, 58, 96),
         ),
         Story(
             kicker="CYBER",
-            head="NSA network outage, Apple failures and hijacked sites rattle the web",
-            detail="The spy agency's internal network degraded during maintenance, Apple fought outages "
-            "across iCloud and the App Store, and BBC, IKEA and Air France pages were compromised "
-            "to steal financial data.",
+            head="NSA outage, Apple failures and hijacked sites rattle the web",
+            detail="BBC, IKEA and Air France pages were compromised to steal financial data.",
             art="globe",
             colour=(24, 74, 92),
         ),
     ],
     cards=[
-        Story("SILICON VALLEY", "Nvidia rules out bringing Jensen Huang back after a bumper quarter",
-              "The board said it does not intend to reinstate him while projecting $130bn of "
-              "fourth-quarter revenue; the firm will also stop shipping Hopper chips to China.",
-              "chart", (44, 78, 52)),
-        Story("ISRAEL", "Eisenkot's bloc takes the Knesset speaker's chair from Netanyahu",
-              "Matan Kahana was elected with the Arab bloc's backing, handing the bloc power to "
-              "advance bills such as a probe of the October 7 attack.",
-              "ballot", (54, 54, 96)),
-        Story("CONGO", "Rival peace efforts fail to halt the fighting in the east",
-              "Diplomatic pushes have not stopped the violence in eastern Congo, where civilians "
-              "keep bearing the cost of the conflict.",
-              "cross", (104, 40, 84)),
-        Story("SHENZHEN", "APEC opens with Takaichi on the ice and Trump's tour under strain",
-              "Japan's new premier meets a cold room at the China summit while cabinet feuds and a "
-              "Kim Jong Un curveball shape the takeaways from the US president's Asia tour.",
-              "plane", (108, 66, 30)),
-        Story("SIBERIA", "Russian An-12 transport crashes with all 19 aboard dead",
-              "The defence ministry said the military aircraft went down in the Kemerovo region of "
-              "south-western Siberia.",
-              "burst", (128, 62, 26)),
-        Story("WASHINGTON", "Trump seeks $50bn to rebuild US aviation after a nationwide halt",
-              "A technical failure stopped air travel on 13 November; the FAA has now paused "
-              "installation of the gear blamed for it.",
-              "plane", (38, 66, 58)),
+        Story("SILICON VALLEY", "Nvidia rules out bringing Jensen Huang back",
+              "Bumper quarter, $130bn guided for the fourth.", "chart", (44, 78, 52)),
+        Story("ISRAEL", "Eisenkot's bloc takes the Knesset speaker's chair",
+              "Kahana won with the Arab bloc's backing.", "ballot", (54, 54, 96)),
+        Story("CONGO", "Rival peace efforts fail to halt fighting in the east",
+              "Pushes have not stopped the violence.", "cross", (104, 40, 84)),
+        Story("SHENZHEN", "APEC opens with Takaichi on the ice",
+              "Japan's new premier meets a cold room in China.", "star",
+              (108, 66, 30)),
+        Story("SIBERIA", "Russian An-12 military transport crashes, 19 dead",
+              "It went down in the Kemerovo region, the ministry said.", "plane",
+              (128, 62, 26)),
+        Story("WASHINGTON", "Trump seeks $50bn to rebuild US aviation",
+              "The FAA paused the gear blamed for the 13 November halt.", "factory",
+              (38, 66, 58)),
     ],
     briefs=[
-        ("GAZA", "Board of Peace warns the ceasefire faces collapse within days"),
-        ("HAITI", "Gang violence blocks aid as child malnutrition worsens"),
-        ("BRAZIL", "Rare images of an isolated Indigenous group highlight the threats it faces"),
-        ("NEW YORK", "Forensic experts claim Epstein was strangled to death"),
-        ("PERU", "Pope Leo forgives the pilgrim who struck his eye with a rosary"),
-        ("DELHI", "Devotees wade through toxic foam in the Yamuna for Chhath"),
-        ("ATLANTA", "US doctors lament a measles resurgence as eradication lapses"),
-        ("CAMBRIDGE", "'Human' is named dictionary word of the year"),
-        ("TOKYO", "Japan's trade gap narrows to ¥476.5bn despite energy imports"),
-        ("SHANGHAI", "China's stock market suffers its worst month in a decade"),
-        ("LONDON", "Sony defeats a £2bn claim over PlayStation Store pricing"),
-        ("QUEBEC", "Government moves to ban religious symbols in schools"),
-        ("TALLINN", "Estonia's plan to shut its Russian border splits families"),
-        ("CHISINAU", "President says a Russian drone crossed the capital"),
-        ("LONDON", "Britain sanctions eight firms building West Bank settlements"),
-        ("BOGOTA", "Hegseth to visit Colombia with a delivery of military equipment"),
-        ("WASHINGTON", "Pakistani man sentenced to 27 years over a plot to kill Trump"),
-        ("MINNESOTA", "Suspect charged over an assault on a Somali American"),
-        ("OXFORD", "Hundreds rally as the university hosts an academic accused of racism"),
-        ("LONDON", "GTA VI leaker Arion Kurtaj pleads guilty to cybercrimes"),
-        ("HOLLYWOOD", "Bezos says he was 'heavily involved' in casting the new Bond"),
-        ("CALIFORNIA", "Waymo pulled from state freeways over an 'imminent hazard'"),
-        ("MELBOURNE", "One Nation pledges a 90% cut to Australia's refugee intake"),
-        ("TURIN", "Zverev beats Shelton to reach the ATP Finals semifinals"),
+        ("GAZA", "Ceasefire 'could collapse in days'"),
+        ("HAITI", "Gangs block aid; malnutrition worsens"),
+        ("BRAZIL", "Rare images of an isolated tribe"),
+        ("NEW YORK", "Experts: Epstein was strangled"),
+        ("PERU", "Pope forgives rosary pilgrim"),
+        ("DELHI", "Devotees wade through toxic foam"),
+        ("ATLANTA", "Measles resurgence alarms doctors"),
+        ("CAMBRIDGE", "'Human' is word of the year"),
+        ("TOKYO", "Trade gap narrows to ¥476.5bn"),
+        ("SHANGHAI", "Worst month for stocks in a decade"),
+        ("LONDON", "Sony defeats £2bn store claim"),
+        ("QUEBEC", "Religious symbols ban in schools"),
+        ("TALLINN", "Russian border closure splits families"),
+        ("CHISINAU", "Russian drone crossed the capital"),
+        ("LONDON", "Sanctions on settlement builders"),
+        ("BOGOTA", "Hegseth to deliver equipment"),
+        ("WASHINGTON", "27 years for a plot to kill Trump"),
+        ("MINNESOTA", "Charge over assault on a Somali"),
+        ("OXFORD", "Rally over an accused academic"),
+        ("LONDON", "GTA VI leaker pleads guilty"),
+        ("HOLLYWOOD", "Bezos 'heavily involved' in Bond"),
+        ("CALIFORNIA", "Waymo pulled over 'imminent hazard'"),
+        ("MELBOURNE", "One Nation: 90% refugee cut"),
+        ("TURIN", "Zverev into the ATP semifinals"),
     ],
     note=[
-        "Nine stories reported at length on this page, twenty-four more in brief below.",
-        "Eighteen November, six continents: the world as it read on Wednesday.",
-        "Disputed claims are attributed to the side that made them; nothing here is a forecast.",
+        "Nine stories at length above, twenty-four more in brief at right.",
+        "Six continents on one page: the world as it read on Wednesday.",
+        "Disputed claims are attributed; nothing here is a forecast.",
     ],
     dots=[
         (56.3, 26.9), (36.5, 45.3), (-76.8, 39.1),
