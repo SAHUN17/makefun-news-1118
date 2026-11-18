@@ -8,7 +8,7 @@ image is committed as `entry.png` and submitted.
 
 DRAFT = True
 
-from render import Page, Story
+from render5 import Page, Story
 
 PAGE = Page(
     lead=Story(
@@ -64,5 +64,21 @@ PAGE = Page(
         ("REGION", "One-line brief that fills the lower band of the page"),
         ("REGION", "One-line brief that fills the lower band of the page"),
         ("REGION", "One-line brief that fills the lower band of the page"),
+        ("REGION", "Second column brief with a slightly longer line of its own"),
+        ("REGION", "Second column brief with a slightly longer line of its own"),
+        ("REGION", "Second column brief with a slightly longer line of its own"),
+        ("REGION", "Second column brief with a slightly longer line of its own"),
+        ("REGION", "Second column brief with a slightly longer line of its own"),
+        ("REGION", "Second column brief with a slightly longer line of its own"),
+    ],
+    note=[
+        "Nine stories reported at length on the front page, twenty more in brief below.",
+        "One day, six continents, one page: the world as it read on Wednesday.",
+        "Disputed claims are attributed in the text; nothing here is a forecast.",
+    ],
+    dots=[
+        (44.0, 33.0), (32.0, 49.0), (121.0, 15.0),
+        (-74.0, 40.7), (77.0, 21.0), (35.0, 31.5),
+        (-1.0, 52.5), (139.0, 35.7), (-58.0, -34.6),
     ],
 )

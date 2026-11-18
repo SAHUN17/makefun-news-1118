@@ -12,7 +12,7 @@ import sys
 from PIL import Image, ImageDraw
 
 import content_1118
-import render
+import render5 as render
 
 MARGIN = render.MARGIN
 SIDE = render.SIDE
