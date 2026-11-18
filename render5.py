@@ -424,7 +424,7 @@ def edition_block(draw, page, x0, y0, width):
     for sub in wrap(draw, line, body, width):
         draw.text((x0, y), sub, font=body, fill=INK)
         y += int(body.size * 1.34)
-    for note in page.note[:2]:
+    for note in page.note[:1]:
         for sub in wrap(draw, note, body, width):
             draw.text((x0, y), sub, font=body, fill=SOFT)
             y += int(body.size * 1.30)
@@ -441,13 +441,14 @@ def edition_block(draw, page, x0, y0, width):
         tag_f = font(FONT_SANS_BOLD, 9)
         num_f = font(FONT_SANS_BOLD, 9)
         col_w = width // 2
-        for i, (name, n) in enumerate(ordered[:10]):
+        for i, (name, n) in enumerate(ordered[:6]):
             cx = x0 + (i % 2) * col_w
             cy = y + (i // 2) * 16
-            draw.text((cx, cy), name.upper()[:14], font=tag_f, fill=SOFT)
-            label = str(n)
-            draw.text((cx + col_w - 14 - text_w(draw, label, num_f), cy), label, font=num_f, fill=RED)
-        y += ((min(len(ordered), 10) + 1) // 2) * 16
+            label = name.upper()[:12]
+            draw.text((cx, cy), label, font=tag_f, fill=SOFT)
+            nx = cx + text_w(draw, label, tag_f) + 6
+            draw.text((nx, cy), str(n), font=num_f, fill=RED)
+        y += ((min(len(ordered), 6) + 1) // 2) * 16
     return y
 
 
